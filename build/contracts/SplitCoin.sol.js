@@ -231,13 +231,13 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.new = function() {
     if (this.currentProvider == null) {
-      throw new Error("ConvertLib error: Please call setProvider() first before calling new().");
+      throw new Error("SplitCoin error: Please call setProvider() first before calling new().");
     }
 
     var args = Array.prototype.slice.call(arguments);
 
     if (!this.unlinked_binary) {
-      throw new Error("ConvertLib error: contract binary not set. Can't deploy new instance.");
+      throw new Error("SplitCoin error: contract binary not set. Can't deploy new instance.");
     }
 
     var regex = /__[^_]+_+/g;
@@ -256,7 +256,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         return name != arr[index + 1];
       }).join(", ");
 
-      throw new Error("ConvertLib contains unresolved libraries. You must deploy and link the following libraries before you can deploy a new version of ConvertLib: " + unlinked_libraries);
+      throw new Error("SplitCoin contains unresolved libraries. You must deploy and link the following libraries before you can deploy a new version of SplitCoin: " + unlinked_libraries);
     }
 
     var self = this;
@@ -297,7 +297,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.at = function(address) {
     if (address == null || typeof address != "string" || address.length != 42) {
-      throw new Error("Invalid address passed to ConvertLib.at(): " + address);
+      throw new Error("Invalid address passed to SplitCoin.at(): " + address);
     }
 
     var contract_class = this.web3.eth.contract(this.abi);
@@ -308,7 +308,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
   Contract.deployed = function() {
     if (!this.address) {
-      throw new Error("Cannot find deployed address: ConvertLib not deployed or address not set.");
+      throw new Error("Cannot find deployed address: SplitCoin not deployed or address not set.");
     }
 
     return this.at(this.address);
@@ -353,29 +353,62 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "constant": false,
         "inputs": [
           {
-            "name": "amount",
-            "type": "uint256"
+            "name": "receiver",
+            "type": "address"
           },
           {
-            "name": "conversionRate",
+            "name": "amount",
             "type": "uint256"
           }
         ],
-        "name": "convert",
+        "name": "sendCoinToSplit",
         "outputs": [
           {
-            "name": "convertedAmount",
+            "name": "sufficient",
+            "type": "bool"
+          }
+        ],
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "deposit",
+        "outputs": [
+          {
+            "name": "balance",
             "type": "uint256"
           }
         ],
         "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "addr",
+            "type": "address"
+          }
+        ],
+        "name": "getBalance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "type": "constructor"
       }
     ],
-    "unlinked_binary": "0x606060405260358060106000396000f36503063fc68da550606060405260e060020a600035046396e4ee3d81146024575b6007565b602435600435026060908152602090f3",
+    "unlinked_binary": "0x6060604052600160a060020a03321660009081526020819052604081205561012e8061002b6000396000f3606060405260e060020a6000350463be2de3e48114610031578063d0e30db014610067578063f8b2cb4f1461009a575b005b61008860043560243533600160a060020a038116600090815260208190526040812054909190600284049010156100ba57610002565b33600160a060020a0316600090815260208190526040902080543401908190555b60408051918252519081900360200190f35b600160a060020a0360043516600090815260208190526040902054610088565b6040822080546002850490819003909155600160a060020a038516908390606082818181858883f19350505050151561012457600283046000600050600033600160a060020a03168152602001908152602001600020600082828250540192505081905550610002565b506001939250505056",
     "events": {},
-    "updated_at": 1475699590362,
+    "updated_at": 1476999868092,
     "links": {},
-    "address": "0x1297f6d571e0c4879d067daa703f5a617dab3609"
+    "address": "0xbc05d02265d77d2ad4081116d54ae6a6cd56c1c6"
   }
 };
 
@@ -460,7 +493,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     Contract.links[name] = address;
   };
 
-  Contract.contract_name   = Contract.prototype.contract_name   = "ConvertLib";
+  Contract.contract_name   = Contract.prototype.contract_name   = "SplitCoin";
   Contract.generated_with  = Contract.prototype.generated_with  = "3.2.0";
 
   // Allow people to opt-in to breaking changes now.
@@ -500,6 +533,6 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   } else {
     // There will only be one version of this contract in the browser,
     // and we can use that.
-    window.ConvertLib = Contract;
+    window.SplitCoin = Contract;
   }
 })();
