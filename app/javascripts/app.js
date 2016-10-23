@@ -93,6 +93,24 @@ function sendCoinToSplit() {
 
 };
 
+function fullWithdraw() {
+  var splitContract = SplitCoin.deployed();
+  
+  setStatus("Initiating Full Withdraw... (please wait)");
+
+
+  splitContract.withdraw( {from: account0}).then(function(value) {
+    setStatus("Withdraw complete!");
+    console.log("Balance updated for account ", account0, "after withdrawing all his money:", value.valueOf());
+    refreshBalance();
+    return value;
+  }).catch(function(e) {
+    console.log(e);
+    setStatus("Error withdrawing; see log.");
+  });
+  
+};
+
 window.onload = function() {
   var receiver0_element = document.getElementById("receiver0");
   var receiver1_element = document.getElementById("receiver1");

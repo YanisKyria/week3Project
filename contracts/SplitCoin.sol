@@ -26,14 +26,37 @@ contract SplitCoin {
 		return true;
 	}
 
-	function deposit() returns (uint balance) {
+	function deposit() returns (uint _deposit) {
+        _deposit = msg.value;
         
-        balances[msg.sender] += msg.value;
-        return balances[msg.sender];
+        balances[msg.sender] += _deposit;
+        if (!this.send(_deposit)) {
+        	balances[msg.sender] -= _deposit;
+        	throw;
+        }
+
+        return _deposit;
+    }
+
+	function withdraw() returns (uint _withdrawn) {
+        address receiver;
+
+        receiver = msg.sender;
+        _withdrawn = balances[receiver];
+
+        if (_withdrawn == 0) throw;
+        if (this.balance < _withdrawn) throw;
+
+		balances[receiver] = 0;
+        if (!receiver.send(_withdrawn)) { 
+        	balances[receiver] = _withdrawn;
+        	throw;
+        }
+
+        return _withdrawn;
     }
 
 	function getBalance(address addr) returns(uint) {
   	return balances[addr];
   	}
-
 }
