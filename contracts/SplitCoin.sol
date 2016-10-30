@@ -59,4 +59,29 @@ contract SplitCoin {
 	function getBalance(address addr) returns(uint) {
   	return balances[addr];
   	}
+
+    function splitOneTransaction (address receiver1, address receiver2) returns(bool sufficient) {
+        // deposit money from sender into the contract
+        uint amount = msg.value;
+        address owner = msg.sender;
+        uint totalAmountSent;
+        
+        totalAmountSent += amount/2;
+        if (!receiver1.send(amount/2)) {
+                throw;
+            }
+
+         totalAmountSent += amount/2;
+        if (!receiver2.send(amount/2)) {
+                throw;
+            }
+
+        if (totalAmountSent < amount) {
+            if (!owner.send(1)) {
+                throw;
+            }
+        } 
+
+    }
+
 }

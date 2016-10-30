@@ -111,6 +111,26 @@ function fullWithdraw() {
   
 };
 
+function splitInOneTransaction() {
+ var splitContract = SplitCoin.deployed();
+  var amountToSplit = parseInt(document.getElementById("amountToSplit").value);
+
+  
+  setStatus("Initiating transaction... (please wait)");
+
+  splitContract.splitOneTransaction(account1, account2, {from: account0, value: amountToSplit, gas: 500000, gasPrice: web3.eth.gasPrice.toString(10)}).then(function(value) {
+    setStatus("Transaction complete!");
+    refreshBalance();
+    console.log("Balance updated for account ", account0, "by splitting", amountToSplit);
+    return value;
+  }).catch(function(e) {
+    console.log(e);
+    setStatus("Error sending coin to balance from account 0; see log.");
+  });
+  
+};
+
+
 window.onload = function() {
   var receiver0_element = document.getElementById("receiver0");
   var receiver1_element = document.getElementById("receiver1");
