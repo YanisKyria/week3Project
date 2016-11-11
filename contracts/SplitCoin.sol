@@ -1,3 +1,4 @@
+pragma solidity 0.4.4;
 contract SplitCoin {
 	
 	mapping (address => uint) balances;
@@ -61,27 +62,18 @@ contract SplitCoin {
   	}
 
     function splitOneTransaction (address receiver1, address receiver2) returns(bool sufficient) {
-        // deposit money from sender into the contract
-        uint amount = msg.value;
-        address owner = msg.sender;
-        uint totalAmountSent;
+             
+        uint amountSent2 = msg.value ;
+        uint amountSent1 = amountSent2/2;
         
-        totalAmountSent += amount/2;
-        if (!receiver1.send(amount/2)) {
+        if (!receiver1.send(msg.value)) {
                 throw;
             }
 
-         totalAmountSent += amount/2;
-        if (!receiver2.send(amount/2)) {
+        amountSent2 -= amountSent1;
+        if (!receiver2.send(amountSent2)) {
                 throw;
             }
-
-        if (totalAmountSent < amount) {
-            if (!owner.send(1)) {
-                throw;
-            }
-        } 
-
+        return true;
     }
-
 }

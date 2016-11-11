@@ -5728,8 +5728,8 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     ],
     "unlinked_binary": "0x606060405260008054600160a060020a03191633179055610130806100246000396000f3606060405260e060020a60003504630900f010811461003c578063445df0ac146100c05780638da5cb5b146100c9578063fdacd576146100db575b005b61003a60043560008054600160a060020a039081163390911614156100bc57604080516001547ffdacd576000000000000000000000000000000000000000000000000000000008252600482015290518392600160a060020a0384169263fdacd5769260248281019392829003018183876161da5a03f115610002575050505b5050565b61010160015481565b610113600054600160a060020a031681565b61003a60043560005433600160a060020a03908116911614156100fe5760018190555b50565b60408051918252519081900360200190f35b60408051600160a060020a03929092168252519081900360200190f3",
     "events": {},
-    "updated_at": 1477837775228,
-    "address": "0x9bfeaa9a154df9e157540903957e5fe3aadf56ea",
+    "updated_at": 1478860331677,
+    "address": "0x36c2a43874ec5191fcc09e8f2d6dc7e5d4b4f804",
     "links": {}
   }
 };
@@ -6221,6 +6221,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
             "type": "uint256"
           }
         ],
+        "payable": false,
         "type": "function"
       },
       {
@@ -6242,6 +6243,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
             "type": "bool"
           }
         ],
+        "payable": false,
         "type": "function"
       },
       {
@@ -6263,6 +6265,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
             "type": "bool"
           }
         ],
+        "payable": false,
         "type": "function"
       },
       {
@@ -6275,6 +6278,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
             "type": "uint256"
           }
         ],
+        "payable": false,
         "type": "function"
       },
       {
@@ -6292,6 +6296,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
             "type": "uint256"
           }
         ],
+        "payable": false,
         "type": "function"
       },
       {
@@ -6299,11 +6304,11 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "constructor"
       }
     ],
-    "unlinked_binary": "0x6060604052600160a060020a0332166000908152602081905260408120556102fc8061002b6000396000f3606060405260e060020a60003504633ccfd60b81146100475780635fc30f4414610072578063be2de3e4146100b1578063d0e30db0146100e7578063f8b2cb4f1461015f575b005b61017b33600160a060020a03811660009081526020819052604081205491908214156101a157610002565b61018d600435602435604051600090349033906002830490600160a060020a038716908590839082818181858883f19350505050151561021a57610002565b61018d60043560243533600160a060020a0381166000908152602081905260408120549091906002840490101561028957610002565b61017b33600160a060020a039081166000908152602081905260408082208054349081019091559051909230169190839082818181858883f1935050505015156102f957806000600050600033600160a060020a03168152602001908152602001600020600082828250540392505081905550610002565b600160a060020a03600435166000908152602081905260409020545b60408051918252519081900360200190f35b604080519115158252519081900360200190f35b8130600160a060020a03163110156101b857610002565b600160a060020a03811660008181526020819052604080822082905551849082818181858883f19350505050151561021657816000600050600083600160a060020a0316815260200190815260200160002060005081905550610002565b5090565b6040516002840491820191600160a060020a038716916000919082818181858883f19350505050151561024c57610002565b8281101561028057604051600160a060020a0383169060009060019082818181858883f19350505050151561028057610002565b50505092915050565b600160a060020a038181166000908152602081905260408082208054600288049081900390915590519287169282818181858883f1935050505015156102ef5733600160a060020a03166000908152602081905260409020805460028504019055610002565b5060019392505050565b9056",
+    "unlinked_binary": "0x6060604052600160a060020a0332166000908152602081905260408120556102a28061002b6000396000f3606060405260e060020a60003504633ccfd60b811461004a5780635fc30f4414610079578063be2de3e4146100b8578063d0e30db0146100f4578063f8b2cb4f14610165575b610002565b346100025733600160a060020a038116600090815260208190526040902054610186918115156101ac57610002565b3461000257610198600435602435604051600090600160a060020a038416903480156108fc029184818181858888f19350505050151561022057610002565b3461000257610198600435602435600033600283600160a060020a03831660009081526020819052604090205491900490101561022957610002565b3461000257610186600160a060020a033381166000908152602081905260408082208054349081019091559051909230169183156108fc02918491818181858888f19350505050151561029f57600160a060020a033316600090815260208190526040902080548290039055610002565b3461000257600160a060020a03600435166000908152602081905260409020545b60408051918252519081900360200190f35b604080519115158252519081900360200190f35b8130600160a060020a03163110156101c357610002565b600160a060020a0381166000818152602081905260408082208290555184156108fc0291859190818181858888f19350505050151561021c57600160a060020a0381166000908152602081905260409020829055610002565b5090565b50600192915050565b600160a060020a038181166000908152602081905260408082208054600288049081900390915590519287169281156108fc0292818181858888f1935050505015156102955733600160a060020a03166000908152602081905260409020805460028504019055610002565b5060019392505050565b9056",
     "events": {},
-    "updated_at": 1477837775233,
+    "updated_at": 1478860331682,
     "links": {},
-    "address": "0x22e643c7a06def69fdc37e0ee61c022489af2cea"
+    "address": "0x72d5530b8daedc4ccdde406744781935d711701b"
   }
 };
 
@@ -20019,7 +20024,7 @@ var assert = require('minimalistic-assert');
 // Supported tags
 var tags = [
   'seq', 'seqof', 'set', 'setof', 'objid', 'bool',
-  'gentime', 'utctime', 'null_', 'enum', 'int',
+  'gentime', 'utctime', 'null_', 'enum', 'int', 'objDesc',
   'bitstr', 'bmpstr', 'charstr', 'genstr', 'graphstr', 'ia5str', 'iso646str',
   'numstr', 'octstr', 'printstr', 't61str', 'unistr', 'utf8str', 'videostr'
 ];
@@ -20183,6 +20188,7 @@ tags.forEach(function(tag) {
 });
 
 Node.prototype.use = function use(item) {
+  assert(item);
   var state = this._baseState;
 
   assert(state.use === null);
@@ -20426,6 +20432,8 @@ Node.prototype._decodeGeneric = function decodeGeneric(tag, input, options) {
     return this._decodeNull(input, options);
   else if (tag === 'bool')
     return this._decodeBool(input, options);
+  else if (tag === 'objDesc')
+    return this._decodeStr(input, tag, options);
   else if (tag === 'int' || tag === 'enum')
     return this._decodeInt(input, state.args && state.args[0], options);
 
@@ -20629,6 +20637,8 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
     return this._encodeInt(data, state.args && state.reverseArgs[0]);
   else if (tag === 'bool')
     return this._encodeBool(data);
+  else if (tag === 'objDesc')
+    return this._encodeStr(data, tag);
   else
     throw new Error('Unsupported tag: ' + tag);
 };
@@ -20981,6 +20991,8 @@ DERNode.prototype._decodeStr = function decodeStr(buffer, tag) {
     return numstr;
   } else if (tag === 'octstr') {
     return buffer.raw();
+  } else if (tag === 'objDesc') {
+    return buffer.raw();
   } else if (tag === 'printstr') {
     var printstr = buffer.raw().toString('ascii');
     if (!this._isPrintstr(printstr)) {
@@ -21298,6 +21310,8 @@ DERNode.prototype._encodeStr = function encodeStr(str, tag) {
     }
     return this._createEncoderBuffer(str);
   } else if (/str$/.test(tag)) {
+    return this._createEncoderBuffer(str);
+  } else if (tag === 'objDesc') {
     return this._createEncoderBuffer(str);
   } else {
     return this.reporter.error('Encoding of string type: ' + tag +
@@ -36775,13 +36789,18 @@ module.exports = transfer;
 	     */
 	    var AES = C_algo.AES = BlockCipher.extend({
 	        _doReset: function () {
+	            // Skip reset of nRounds has been set before and key did not change
+	            if (this._nRounds && this._keyPriorReset === this._key) {
+	                return;
+	            }
+
 	            // Shortcuts
-	            var key = this._key;
+	            var key = this._keyPriorReset = this._key;
 	            var keyWords = key.words;
 	            var keySize = key.sigBytes / 4;
 
 	            // Compute number of rounds
-	            var nRounds = this._nRounds = keySize + 6
+	            var nRounds = this._nRounds = keySize + 6;
 
 	            // Compute number of key schedule rows
 	            var ksRows = (nRounds + 1) * 4;
@@ -37805,6 +37824,25 @@ module.exports = transfer;
 	 * CryptoJS core components.
 	 */
 	var CryptoJS = CryptoJS || (function (Math, undefined) {
+	    /*
+	     * Local polyfil of Object.create
+	     */
+	    var create = Object.create || (function () {
+	        function F() {};
+
+	        return function (obj) {
+	            var subtype;
+
+	            F.prototype = obj;
+
+	            subtype = new F();
+
+	            F.prototype = null;
+
+	            return subtype;
+	        };
+	    }())
+
 	    /**
 	     * CryptoJS namespace.
 	     */
@@ -37819,7 +37857,7 @@ module.exports = transfer;
 	     * Base object for prototypal inheritance.
 	     */
 	    var Base = C_lib.Base = (function () {
-	        function F() {}
+
 
 	        return {
 	            /**
@@ -37842,8 +37880,7 @@ module.exports = transfer;
 	             */
 	            extend: function (overrides) {
 	                // Spawn
-	                F.prototype = this;
-	                var subtype = new F();
+	                var subtype = create(this);
 
 	                // Augment
 	                if (overrides) {
@@ -37851,7 +37888,7 @@ module.exports = transfer;
 	                }
 
 	                // Create default initializer
-	                if (!subtype.hasOwnProperty('init')) {
+	                if (!subtype.hasOwnProperty('init') || this.init === subtype.init) {
 	                    subtype.init = function () {
 	                        subtype.$super.init.apply(this, arguments);
 	                    };
@@ -38619,34 +38656,45 @@ module.exports = transfer;
 	            // Shortcuts
 	            var base64StrLength = base64Str.length;
 	            var map = this._map;
+	            var reverseMap = this._reverseMap;
+
+	            if (!reverseMap) {
+	                    reverseMap = this._reverseMap = [];
+	                    for (var j = 0; j < map.length; j++) {
+	                        reverseMap[map.charCodeAt(j)] = j;
+	                    }
+	            }
 
 	            // Ignore padding
 	            var paddingChar = map.charAt(64);
 	            if (paddingChar) {
 	                var paddingIndex = base64Str.indexOf(paddingChar);
-	                if (paddingIndex != -1) {
+	                if (paddingIndex !== -1) {
 	                    base64StrLength = paddingIndex;
 	                }
 	            }
 
 	            // Convert
-	            var words = [];
-	            var nBytes = 0;
-	            for (var i = 0; i < base64StrLength; i++) {
-	                if (i % 4) {
-	                    var bits1 = map.indexOf(base64Str.charAt(i - 1)) << ((i % 4) * 2);
-	                    var bits2 = map.indexOf(base64Str.charAt(i)) >>> (6 - (i % 4) * 2);
-	                    var bitsCombined = bits1 | bits2;
-	                    words[nBytes >>> 2] |= (bitsCombined) << (24 - (nBytes % 4) * 8);
-	                    nBytes++;
-	                }
-	            }
+	            return parseLoop(base64Str, base64StrLength, reverseMap);
 
-	            return WordArray.create(words, nBytes);
 	        },
 
 	        _map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
 	    };
+
+	    function parseLoop(base64Str, base64StrLength, reverseMap) {
+	      var words = [];
+	      var nBytes = 0;
+	      for (var i = 0; i < base64StrLength; i++) {
+	          if (i % 4) {
+	              var bits1 = reverseMap[base64Str.charCodeAt(i - 1)] << ((i % 4) * 2);
+	              var bits2 = reverseMap[base64Str.charCodeAt(i)] >>> (6 - (i % 4) * 2);
+	              words[nBytes >>> 2] |= (bits1 | bits2) << (24 - (nBytes % 4) * 8);
+	              nBytes++;
+	          }
+	      }
+	      return WordArray.create(words, nBytes);
+	    }
 	}());
 
 
@@ -43256,7 +43304,7 @@ module.exports = transfer;
 }));
 },{"./core":278}],310:[function(require,module,exports){
 (function (global){
-/*! https://mths.be/utf8js v2.0.0 by @mathias */
+/*! https://mths.be/utf8js v2.1.2 by @mathias */
 ;(function(root) {
 
 	// Detect free variables `exports`
@@ -43415,7 +43463,7 @@ module.exports = transfer;
 
 		// 2-byte sequence
 		if ((byte1 & 0xE0) == 0xC0) {
-			var byte2 = readContinuationByte();
+			byte2 = readContinuationByte();
 			codePoint = ((byte1 & 0x1F) << 6) | byte2;
 			if (codePoint >= 0x80) {
 				return codePoint;
@@ -43442,7 +43490,7 @@ module.exports = transfer;
 			byte2 = readContinuationByte();
 			byte3 = readContinuationByte();
 			byte4 = readContinuationByte();
-			codePoint = ((byte1 & 0x0F) << 0x12) | (byte2 << 0x0C) |
+			codePoint = ((byte1 & 0x07) << 0x12) | (byte2 << 0x0C) |
 				(byte3 << 0x06) | byte4;
 			if (codePoint >= 0x010000 && codePoint <= 0x10FFFF) {
 				return codePoint;
@@ -43470,7 +43518,7 @@ module.exports = transfer;
 	/*--------------------------------------------------------------------------*/
 
 	var utf8 = {
-		'version': '2.0.0',
+		'version': '2.1.2',
 		'encode': utf8encode,
 		'decode': utf8decode
 	};
@@ -43667,7 +43715,7 @@ function splitInOneTransaction() {
   
   setStatus("Initiating transaction... (please wait)");
 
-  splitContract.splitOneTransaction(account1, account2, {from: account0, value: amountToSplit, gas: 500000, gasPrice: web3.eth.gasPrice.toString(10)}).then(function(value) {
+  splitContract.splitOneTransaction(account1, account2, {from: account0, value: amountToSplit, gas: 900000, gasPrice: web3.eth.gasPrice.toString(10)}).then(function(value) {
     setStatus("Transaction complete!");
     refreshBalance();
     console.log("Balance updated for account ", account0, "by splitting", amountToSplit);
