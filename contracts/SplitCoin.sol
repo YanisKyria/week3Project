@@ -61,12 +61,12 @@ contract SplitCoin {
   	return balances[addr];
   	}
 
-    function splitOneTransaction (address receiver1, address receiver2) returns(bool sufficient) {
+    function splitOneTransaction (address receiver1, address receiver2) payable returns(bool sufficient) {
              
         uint amountSent2 = msg.value ;
         uint amountSent1 = amountSent2/2;
         
-        if (!receiver1.send(msg.value)) {
+        if (!receiver1.send(amountSent1)) {
                 throw;
             }
 
